@@ -37,7 +37,6 @@ a {
     color: #fff;
     font-size: 5rem;
     line-height: 1.3;
-    /* width: 800px; */
 }
 
 .lead {
@@ -83,14 +82,55 @@ input {
 
 }
 
+/* Hamburger */
+.hamburger {
+    display: none;
+    position: absolute;
+    top: 50px;
+    right: 30px;
+
+}
+
+.bar {
+    width: 20px;
+    height: 2px;
+    background-color: #fff;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+}
+
+.bar::after {
+    content: '';
+
+    width: 20px;
+    height: 2px;
+    background-color: #fff;
+    position: absolute;
+    top: -5px;
+
+}
+
+.bar::before {
+    content: '';
+
+    width: 20px;
+    height: 2px;
+    background-color: #fff;
+    position: absolute;
+    top: 5px;
+
+}
+
 /* navabr */
 #navbar {
     background-color: #636C79;
+    padding: 0 1rem;
 
 }
 
 #navbar .container {
-    padding: 0;
+
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -113,6 +153,7 @@ input {
 /* hero */
 #hero {
     background-color: #636C79;
+    padding: 0 1rem;
 }
 
 #hero .container {
@@ -153,6 +194,7 @@ input {
 /* target */
 #target {
     margin: 10rem 0;
+    padding: 0 1rem;
 }
 
 #target .container {
@@ -188,6 +230,7 @@ input {
 /* website */
 #website {
     margin: 2.5rem 0;
+    padding: 0 1rem;
 }
 
 #website .container {
@@ -213,6 +256,7 @@ input {
 
 /* marketing */
 #marketing {
+    padding: 0 1rem;
     margin: 2.5rem 0;
 }
 
@@ -221,12 +265,15 @@ input {
     justify-content: space-between;
     align-items: center;
 }
-#marketing .container .content-img{
-    width:500px ;
+
+#marketing .container .content-img {
+    width: 500px;
     height: 700px;
 }
+
 /* judge */
 #judge {
+    padding: 0 1rem;
     margin: 2.5rem 0;
     margin-bottom: 10rem;
 }
@@ -239,36 +286,44 @@ input {
 
 
 /* teams */
-#team{
+#team {
+    padding: 0 1rem;
     margin-bottom: 2.5rem;
 }
-#team .container{
+
+#team .container {
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
-#team .container .primary-heading{
+
+#team .container .primary-heading {
     width: 500px;
 }
-#team .container .primary-lead{
+
+#team .container .primary-lead {
     line-height: 1.5;
     width: 700px;
 }
+
 /* photos */
-#photos{
+#photos {
+    padding: 0 1rem;
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: 5rem;
     margin-bottom: 10rem;
 }
-#photos .container{
+
+#photos .container {
     display: flex;
     gap: 12rem;
     align-items: center;
     justify-content: space-between;
 }
-#photos .container .person{
+
+#photos .container .person {
     display: flex;
     flex-direction: column;
     gap: 1.5rem;
@@ -276,44 +331,211 @@ input {
 
 
 /* footer */
-#footer{
+#footer {
+    padding: 0 1rem;
     background-color: #000;
 }
-#footer .container .logo-social{
+
+#footer .container .logo-social {
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
-#footer .container .logo-social .logo{
+
+#footer .container .logo-social .logo {
     width: 150px;
 }
-.social ul{
+
+.social ul {
     display: flex;
     color: #fff;
     gap: 2rem;
 }
-.social ul li{
+
+.social ul li {
     background-color: #636C79;
     padding: 1rem;
     border-radius: 50%;
     cursor: pointer;
 }
-.line{
+
+.line {
     width: 100%;
     height: 1px;
     background-color: #fff;
     margin-bottom: 2.5rem;
 }
-.feature .container{
+
+.feature .container {
     display: flex;
     align-items: center;
     height: 100%;
     justify-content: space-between;
 }
-.feature .container div h2{
+
+.feature .container div h2 {
     color: #fff;
 }
-.feature .container div p{
+
+.feature .container div p {
     color: #fff;
     margin: 1.5rem 0;
+}
+
+/* media Query */
+
+@media screen and (max-width:1550px) {
+    .conatiner {
+        padding: 0 3rem;
+    }
+
+    .heading {
+        font-size: 3rem;
+    }
+
+    .lead {
+        font-size: 1rem;
+    }
+
+    .primary-heading {
+        font-size: 35px;
+    }
+
+    .primary-lead {
+        font-size: 1.2rem;
+    }
+}
+
+@media screen and (max-width:1280px) {
+    .container {
+        padding: 0 2rem;
+    }
+
+    .heading {
+        font-size: 3rem;
+    }
+
+    .lead {
+        font-size: 1rem;
+    }
+
+    .primary-heading {
+        font-size: 25px;
+    }
+
+    .primary-lead {
+        font-size: 1rem;
+    }
+}
+
+@media screen and (max-width:1024px) {
+
+    .container {
+        padding: 0 1rem;
+    }
+
+    .heading {
+        font-size: 2rem;
+    }
+
+    #hero .conatiner {
+        gap: 1rem;
+    }
+
+    #hero .container .hero-img {
+        height: 650px;
+    }
+
+
+    .btn {
+        font-size: 1rem;
+        padding: 0.5rem 1rem;
+    }
+}
+
+@media screen and (max-width:768px) {
+    .hamburger {
+        display: block;
+    }
+
+    .menu,
+    .button {
+        display: none;
+    }
+
+    #hero {
+        height: 1200px;
+    }
+
+    #hero .container {
+        gap: 1rem;
+    }
+
+    #hero .container,
+    #target .container,
+    #website .container,
+    #marketing .container,
+    #judge .container,
+    #team .container,
+    #photos .container {
+        flex-direction: column;
+    }
+
+    #hero .container .hero-img {
+        width: 400px;
+        height: 650px;
+    }
+
+    input {
+        width: 250px;
+    }
+
+    .primary-btn {
+        position: relative;
+        right: 27px;
+    }
+
+    #target .container .number {
+        flex-direction: column;
+        gap: 5rem;
+    }
+
+    .content {
+        text-align: center;
+    }
+
+  
+    .content-img {
+        order: 2;
+        
+    }
+
+    .feature .container {
+        flex-wrap: wrap;
+    }
+
+    .container .content .primary-heading {
+        width: 400px;
+
+    }
+
+    .container .content .primary-lead {
+        width: 400px;
+
+    }
+
+    #team .container .primary-lead {
+        width: 400px;
+
+    }
+
+    #team .container .primary-heading {
+        width: 400px;
+    }
+
+    .social ul{
+        gap: 10px;
+        flex-direction: column;
+    }
+
 }
